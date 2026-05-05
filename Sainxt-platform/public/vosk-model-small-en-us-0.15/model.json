@@ -1,0 +1,10 @@
+{
+  "name": "vosk-model-small-en-us-0.15",
+  "version": "0.15",
+  "sampleRate": 16000,
+  "am": "am",
+  "conf": "conf",
+  "graph": "graph",
+  "ivector": "ivector",
+  "type": "full"
+}

@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 40% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 8%;
+    --primary: 210 40% 8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 40% 8%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 210 40% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 40% 8%;
+    --radius: 0.75rem;
+
+    /* Enterprise-Grade AI Career Platform Colors */
+    --deep-navy: 210 35% 17%; /* #1E2A38 */
+    --graphite-gray: 215 8% 18%; /* #2A2D34 */
+    --neon-coral: 11 100% 61%; /* #FF5E3A */
+    --electric-orange: 14 100% 64%; /* #FF6B4A */
+    --aqua-blue: 172 75% 52%; /* #33D6C4 */
+    --pure-white: 0 0% 100%; /* #FFFFFF */
+    --light-gray: 210 17% 98%; /* #F8F9FA */
+    --soft-gray: 210 11% 93%; /* #EDEFF2 */
+    --text-gray: 210 9% 53%; /* #6C757D */
+
+    /* Semantic Color Mappings */
+    --primary-structure: var(--deep-navy);
+    --secondary-structure: var(--graphite-gray);
+    --primary-action: var(--neon-coral);
+    --secondary-action: var(--electric-orange);
+    --accent-info: var(--aqua-blue);
+    --surface-primary: var(--pure-white);
+    --surface-secondary: var(--light-gray);
+    --surface-tertiary: var(--soft-gray);
+    --text-secondary: var(--text-gray);
+  }
+
+  .dark {
+    --background: 210 40% 7%; /* #12161C */
+    --foreground: 0 0% 98%;
+    --card: 215 8% 12%; /* #1E1F24 */
+    --card-foreground: 0 0% 98%;
+    --popover: 215 8% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 210 40% 8%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 11% 65%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 0 0% 98%;
+
+    /* Dark Mode Overrides */
+    --surface-primary: 215 8% 12%; /* #1E1F24 */
+    --surface-secondary: 210 40% 7%; /* #12161C */
+    --surface-tertiary: 215 8% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Inter", "IBM Plex Sans", "Satoshi", system-ui, sans-serif;
+  }
+}
+
+/* Enterprise AI Platform Animations */
+@keyframes ai-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes neural-network {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes momentum-slide {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Utility Classes for New Color System */
+.bg-deep-navy {
+  background-color: hsl(var(--deep-navy));
+}
+
+.bg-graphite-gray {
+  background-color: hsl(var(--graphite-gray));
+}
+
+.bg-neon-coral {
+  background-color: hsl(var(--neon-coral));
+}
+
+.bg-electric-orange {
+  background-color: hsl(var(--electric-orange));
+}
+
+.bg-aqua-blue {
+  background-color: hsl(var(--aqua-blue));
+}
+
+.bg-surface-primary {
+  background-color: hsl(var(--surface-primary));
+}
+
+.bg-surface-secondary {
+  background-color: hsl(var(--surface-secondary));
+}
+
+.bg-surface-tertiary {
+  background-color: hsl(var(--surface-tertiary));
+}
+
+.text-deep-navy {
+  color: hsl(var(--deep-navy));
+}
+
+.text-graphite-gray {
+  color: hsl(var(--graphite-gray));
+}
+
+.text-neon-coral {
+  color: hsl(var(--neon-coral));
+}
+
+.text-electric-orange {
+  color: hsl(var(--electric-orange));
+}
+
+.text-aqua-blue {
+  color: hsl(var(--aqua-blue));
+}
+
+.text-secondary {
+  color: hsl(var(--text-secondary));
+}
+
+.border-deep-navy {
+  border-color: hsl(var(--deep-navy));
+}
+
+.border-soft-gray {
+  border-color: hsl(var(--soft-gray));
+}
+
+/* Enterprise Button Styles */
+.btn-primary {
+  @apply bg-neon-coral text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:bg-electric-orange hover:shadow-lg hover:scale-105 focus:ring-4 focus:ring-neon-coral/20;
+}
+
+.btn-secondary {
+  @apply bg-surface-tertiary text-deep-navy font-semibold px-6 py-3 rounded-xl border border-soft-gray transition-all duration-200 hover:bg-surface-secondary hover:shadow-md focus:ring-4 focus:ring-aqua-blue/20;
+}
+
+.btn-accent {
+  @apply bg-aqua-blue text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:bg-aqua-blue/90 hover:shadow-lg focus:ring-4 focus:ring-aqua-blue/20;
+}
+
+/* Enterprise Card Styles */
+.card-enterprise {
+  @apply bg-surface-primary border border-soft-gray rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 p-6;
+}
+
+.card-ai-enhanced {
+  @apply bg-surface-primary border border-aqua-blue/20 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 p-6 relative overflow-hidden;
+}
+
+.card-ai-enhanced::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, hsl(var(--aqua-blue)), hsl(var(--neon-coral)));
+  animation: neural-network 3s ease-in-out infinite;
+}
+
+/* AI Circuit Pattern */
+.ai-circuit-pattern {
+  background-image: linear-gradient(90deg, hsl(var(--aqua-blue) / 0.1) 1px, transparent 1px),
+    linear-gradient(hsl(var(--aqua-blue) / 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Momentum Gradient */
+.momentum-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--deep-navy)) 0%,
+    hsl(var(--graphite-gray)) 50%,
+    hsl(var(--deep-navy)) 100%
+  );
+}
+
+.action-gradient {
+  background: linear-gradient(135deg, hsl(var(--neon-coral)) 0%, hsl(var(--electric-orange)) 100%);
+}
+
+.info-gradient {
+  background: linear-gradient(135deg, hsl(var(--aqua-blue)) 0%, hsl(var(--aqua-blue) / 0.8) 100%);
+}
+
+/* Text Gradient for AI Branding */
+.text-ai-gradient {
+  background: linear-gradient(135deg, hsl(var(--neon-coral)), hsl(var(--aqua-blue)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation Classes */
+.animate-ai-pulse {
+  animation: ai-pulse 2s ease-in-out infinite;
+}
+
+.animate-data-flow {
+  animation: data-flow 3s ease-in-out infinite;
+}
+
+.animate-momentum {
+  animation: momentum-slide 0.6s ease-out;
+}
+
+/* Focus and Accessibility */
+.focus-enterprise {
+  @apply focus:outline-none focus:ring-4 focus:ring-aqua-blue/20 focus:border-aqua-blue;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--surface-secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, hsl(var(--neon-coral)), hsl(var(--aqua-blue)));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, hsl(var(--electric-orange)), hsl(var(--aqua-blue)));
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --neon-coral: 11 100% 45%;
+    --electric-orange: 14 100% 50%;
+    --aqua-blue: 172 75% 40%;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ai-pulse,
+  .animate-data-flow,
+  .animate-momentum {
+    animation: none;
+  }
+}
+
+

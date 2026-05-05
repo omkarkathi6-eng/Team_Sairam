@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "target": "ES6",
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.js", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/admin/profile/page.jsx", "app/admin/dashboard/page.jsx", "app/assessment/interview/page.jsx", "app/assessment/coding/page.jsx", "app/auth/forgot-password/page.jsx", "app/auth/login/page.jsx", "app/auth/register/page.jsx", "app/enterprise/dashboard/page.jsx", "app/enterprise/jobs/page.jsx", "app/enterprise/profile/page.jsx", "app/individual/assessment/skill-test/page.jsx", "app/individual/assessment/results/page.jsx", "app/enterprise/settings/page.jsx", "tailwind.config.js", "lib/utils.js", "hooks/use-toast.js", "hooks/use-mobile.jsx", "components/ui/use-toast.js", "components/theme-provider.jsx", "components/ui/use-mobile.jsx", "components/ui/tooltip.jsx", "components/ui/toggle.jsx", "components/ui/toggle-group.jsx", "components/ui/toaster.jsx", "components/ui/toast.jsx", "components/ui/textarea.jsx", "components/ui/tabs.jsx", "components/ui/table.jsx", "components/ui/switch.jsx", "components/ui/sonner.jsx", "components/ui/slider.jsx", "components/ui/skeleton.jsx", "components/ui/sidebar.jsx", "components/ui/sheet.jsx", "components/ui/separator.jsx", "components/ui/select.jsx", "components/ui/scroll-area.jsx", "components/ui/resizable.jsx", "components/ui/radio-group.jsx", "components/ui/progress.jsx", "components/ui/popover.jsx", "components/ui/pagination.jsx", "components/ui/navigation-menu.jsx", "components/ui/menubar.jsx", "components/ui/label.jsx", "components/ui/input.jsx", "components/ui/input-otp.jsx", "components/ui/hover-card.jsx", "components/ui/form.jsx", "components/ui/dropdown-menu.jsx", "components/ui/drawer.jsx", "components/ui/dialog.jsx", "components/ui/context-menu.jsx", "components/ui/data-table.jsx", "components/ui/command.jsx", "components/ui/collapsible.jsx", "components/ui/checkbox.jsx", "components/ui/chart.jsx", "components/ui/carousel.jsx", "components/ui/card.jsx", "components/ui/calendar.jsx", "components/ui/button.jsx", "components/ui/breadcrumb.jsx", "components/ui/badge.jsx", "components/ui/avatar.jsx", "components/ui/aspect-ratio.jsx", "components/ui/alert.jsx", "components/ui/alert-dialog.jsx", "components/ui/accordion.jsx", "components/learning/roadmap.jsx", "components/layout/sidebar-nav.jsx", "components/layout/dashboard-layout.jsx", "components/auth/logout.jsx", "app/page.jsx", "app/layout.jsx", "app/individual/settings/page.jsx", "app/individual/profile/page.jsx", "app/individual/dashboard/page.jsx", "app/individual/assessments/page.jsx"],
+  "exclude": ["node_modules"]
+}
